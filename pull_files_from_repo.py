@@ -4,7 +4,7 @@ import io
 
 if __name__ == '__main__':
     REPO = "https://github.com/DurhamARC-Training/Intermediate-Python"
-    BRANCH = main
+    BRANCH = "main"
     url = f"{REPO}/zipball/{BRANCH}"
     print(f"Downloading {url}...)")
     # urlopen allows us to access files on the internet
