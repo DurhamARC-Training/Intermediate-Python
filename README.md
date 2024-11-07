@@ -10,6 +10,8 @@ The repository is organized as follows:
 
 - `Intermediate_full.ipynb`: The course's Jupyter notebook with all the material filled in. It is meant for reference purposes for teaching the course and as a fallback if something is missing from the notes students made during the course.
 
+- `pull_files_from_repo.py`: download script that can be executed to extract this repository into a folder.
+
 ## Getting started as student
 
 There are three possibilities to get the data:
@@ -19,6 +21,12 @@ There are three possibilities to get the data:
 2. If you have GIT available, you can just clone the repo with:
 
    `git clone https://github.com/DurhamARC-Training/Intermediate-Python.git`
+
+3. There is also a python script which downloads everything (including the filled notebook) as a ZIP archive and extracts it a folder if GIT isn't available:
+
+      a. Download the `pull_files_from_repo.py` file and put it into your environment
+
+      b. Execute `python pull_files_from_repo.py` in the folder.
 
 ## Getting started for teaching
 
