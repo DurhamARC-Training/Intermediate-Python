@@ -209,6 +209,9 @@ There are plenty of resources to learn Python in the Internet from. These can be
 - [Python tips](https://book.pythontips.com/en/latest/index.html)
 
 
+# <ins>**Part I**</ins>
+
+
 # <ins>**1.**</ins> Recap
 
 <!-- #region editable=true slideshow={"slide_type": "slide"} -->
@@ -963,10 +966,9 @@ print(t2)
 
 The dictionary method `items` returns a list of tuples (see an exercise after _dictionaries_).
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
+
 ## _Sets_
 A _set_ is unordered collection of unique elements, representing a mathematical set. Pythoh stores the data in a set in whatever order it wants to, so indexing has no meaning for sets unlike for lists. It looks like a list, but with no repeats, and is denoted by curly braces (`{}`).
-<!-- #endregion -->
 
 ```python
 # An empty set
@@ -1199,9 +1201,8 @@ print(line.find('fox'))
 * _Lambdas_ - anonymous functions
 <!-- #endregion -->
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
 ## _Comprehensions_
-<!-- #endregion -->
+
 
 ### `list` comprehensions
 
@@ -1247,9 +1248,8 @@ squared = {x**2 for x in [1, 1, 2]}
 print(squared)
 ```
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
 ## _Conditional expressions_
-<!-- #endregion -->
+
 
 They are known as _ternary operators_ in other languages. They became a part of Python from version 2.4
 
@@ -1289,9 +1289,94 @@ my_function("John")
 my_function("Mike", "anonymous123")
 ```
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
-## _Iterators_ beneath control flows
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+## _Advanced function arguments_
 <!-- #endregion -->
+
+You have already learned that functions can have arguments, and these can be called as keyword arguments. 
+Say we want to build a function summing up arguments, but there can be a different number of arguments:
+
+```python
+def sum2(arg1, arg2):
+    return arg1 + arg2
+
+def sum3(arg1, arg2, arg3):
+    return arg1 + arg2 + arg3
+
+...
+
+print(sum2(2,3))
+print(sum3(2,3,4))
+```
+
+<!-- #region editable=true slideshow={"slide_type": "fragment"} -->
+The answer to not make it tedious is to use *args as argument.
+<!-- #endregion -->
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+### Using `*args` in a function to catch arguments
+We can use `*args` to catch all non-keyword arguments as a tuple and sum over them
+<!-- #endregion -->
+
+```python
+# sum_args sums over all arguments
+def sum_args(*args):
+    accumulator = 0
+    for arg in args:
+        accumulator += arg
+    return accumulator
+
+# print with the same arguments as before
+print(sum_args(2,3))
+print(sum_args(2,3,4))
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+### Using *args in function invocation
+If we call a function with `*arguments` it will unpack them. The variable arguments will need to be iterable (such as a list or a tuple).
+<!-- #endregion -->
+
+```python
+numbers = (2, 3)
+
+# call sum2 with unpacked *var2
+print("Value unpacking with sum2(*numbers):", sum2(*numbers))
+
+# Demonstrate that this is the same as calling on the separate arguments
+print("Because numbers has length 2 this is identical to sum2(numbers[0], numbers[1]):", sum2(*numbers))
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+### Using `**kwargs` in a function to catch keyword arguments
+Similarly, we can catch keyword arguments as a dictionary
+<!-- #endregion -->
+
+```python
+def print_kwargs(**kwargs):
+    print("keywords: ", kwargs.keys())
+    print("values: ", kwargs.values())
+
+print_kwargs(first_arg=12, second_arg="super")
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+### Using `**kwargs` in command invokation
+We can also assign the values of a dictionary to the names of function arguments. This really useful to assemble your values to call a function.
+<!-- #endregion -->
+
+```python
+def flower_output(flower_name, colour):
+    print(f'{flower_name}s are {colour}')
+
+flower_dict = {}
+flower_dict['flower_name'] = 'rose'
+flower_dict['colour'] = 'red'
+
+flower_output(**flower_dict)
+```
+
+## _Iterators_ beneath control flows
+
 
 But what is the for loop doing under the hood?
 
@@ -1334,9 +1419,8 @@ next(it)
 next(it)
 ```
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
 ## _Lambda_ functions
-<!-- #endregion -->
+
 
 **_Lambda functions_** for compact inline function definitions. Useful when you don’t want to use a function twice:
 
@@ -1390,9 +1474,98 @@ squared = list(map(lambda x: x**3, items))
 print(squared)
 ```
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
 ## Have a play!
+
+#### List Comprehension Basics
+Create a list of even numbers between 1 and 20 using a list comprehension.
+
+Hint Remember the `range()` function and modulo operator `%`
 <!-- #endregion -->
+
+```python
+
+```
+
+```python
+# Solution
+even_numbers = [x for x in range(1, 21) if x % 2 == 0]
+even_numbers
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+#### Dictionary Comprehension
+Given this dictionary of fruits and their quantities, create a now dictionary where the number of fruits are doubled
+<!-- #endregion -->
+
+```python
+fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
+
+```
+
+```python
+# Solution:
+fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
+doubled_fruits = {fruit: amount * 2 for fruit, amount in fruits.items()}
+doubled_fruits
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+#### Conditional Expression
+Write a function that takes a number and returns 'positive' if > 0, 'negative' if < 0, and 'zero' if 0, using a conditional expression.
+<!-- #endregion -->
+
+```python
+def check_number(num):
+    return # Your code here
+```
+
+```python
+# solution
+def check_number(num):
+    return 'positive' if num > 0 else 'negative' if num < 0 else 'zero'
+check_number(5)
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+#### Args Practice
+Write a function that takes any number of strings and returns them concatenated with spaces between them.
+
+Hint: Think about `join()` and how it works with strings
+<!-- #endregion -->
+
+```python
+# Example: combine_strings('hello', 'world') returns 'hello world'
+def combine_strings(*args):
+    return # Your code here
+```
+
+```python
+# solution:
+def combine_strings(*args):
+    return ' '.join(args)
+```
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+#### Lambda and Sorting
+Sort this list of dictionaries by the 'age' key using a lambda function.
+
+Hint: The `sort`/`sorted` function takes a key parameter
+<!-- #endregion -->
+
+```python
+people = [
+    {'name': 'Alice', 'age': 25},
+    {'name': 'Bob', 'age': 20},
+    {'name': 'Charlie', 'age': 30}
+]
+sorted_people = # Your code here
+```
+
+```python editable=true slideshow={"slide_type": ""}
+# solution
+sorted_people = sorted(people, key=lambda x: x['age'])
+```
 
 # <ins>5.</ins> Introduction to modules
 A _module_ is a single file (or collection of files) that is intended to be imported and used in other Python programs. It can include functions, classes, variables, and runnable code.
