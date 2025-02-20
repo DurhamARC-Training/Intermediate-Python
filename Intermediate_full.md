@@ -209,6 +209,9 @@ There are plenty of resources to learn Python in the Internet from. These can be
 - [Python tips](https://book.pythontips.com/en/latest/index.html)
 
 
+# <ins>**Part I**</ins>
+
+
 # <ins>**1.**</ins> Recap
 
 <!-- #region editable=true slideshow={"slide_type": "slide"} -->
@@ -1481,9 +1484,9 @@ Python comes with a program called pip which will automatically fetch packages r
 | **`itertools`**  | provides a generator-like object named `permutations`
 | **`csv`**        | parsing and writing `csv` files
 
-
+<!-- #region editable=true slideshow={"slide_type": ""} -->
 ## Using _modules_
-
+<!-- #endregion -->
 
 ### _Example_
 Interfacing with the operating system: **`os`**
@@ -1494,8 +1497,8 @@ home = "/home"
 print(os.path.join(home, os.environ["USER"], "holiday_planning.txt"))
 print(os.listdir("/home/dmitry/Desktop"))
 if not os.path.exists("nofile.txt"):
-  print("File not found")
-  exit(1)
+    print("File not found")
+    exit(1)
 ```
 
 We'll demonstrate how to use modules in the actual code using the example of reading/writing files. In the _Beginner_ course, we showed the basic reading/writing files using the built-in functions of Python. But there's a better way of doing that by means of the specialised module called **`csv`**.
@@ -1530,14 +1533,48 @@ with open ("example.csv", 'r') as in_f:
             break
 ```
 
-## ```__main__``` special built-in variable
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+## Building your own module
 
+  - If you have a .py file in a path that is available to python, you can import any object defined in that file.
+  - If you have `mymodule.py` in your folder you can just write:
+    `import mymodule`
+    and use a function defined in there with `mymodule.my_function(arg)`
+  - of course you can also use the  method
+    `from mymodule import my_function`
+<!-- #endregion -->
 
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+### ```__main__``` special built-in variable
+So python files can be executed with 
+`python mymodule.py` or loaded from with `import`
+However, all commands just put into a python file will be executed on import.
 
+The answer is to introduce a `__main__` block that is only executed when the file is called as a script.
+It is good practice to have all code executed in a script to be either in a function or in this block.
 
+<!-- #endregion -->
 
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+
+### Example content of `mymodule.py`:
+```python
+def myfunction():
+    print("I will be only printed when the function is called")
+
+print("I will be called on import and execution as a script")
+
+if __name__ == "__main__":
+    print("I will only executed when called as a script")
+```
+<!-- #endregion -->
+
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
 ## Have a play!
 
+ - try to put the example content from the last slide into a mymodule.py in your folder and import `myfunction` into this notebook
+ - Add your own function that returns the sine of a value (you might need to restart the kernel in the tab Kernel-> Restart Kernel) if you have already executed the import.
+<!-- #endregion -->
 
 # <ins>6.</ins> Brief introduction to classes
 
