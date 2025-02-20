@@ -14,19 +14,21 @@ The repository is organized as follows:
 
 ## Getting started as student
 
+If you want to set up a new conda environment for the course you can use `environment.yml` provided in this folder.
+
 There are three possibilities to get the data:
 
-1. If you want only to follow along, just download and open the `Intermediate.ipynb` notebook on your machine or in your environment using your local Jypyter installation.
+1. If you want only to follow along, just download and open the `Intermediate.ipynb` notebook on your machine or in your environment using your local Jupyter installation.
 
-2. If you have GIT available, you can just clone the repo with:
-
-   `git clone https://github.com/DurhamARC-Training/Intermediate-Python.git`
-
-3. There is also a python script which downloads everything (including the filled notebook) as a ZIP archive and extracts it a folder if GIT isn't available:
+2. There is also a python script which downloads everything (including the filled notebook) as a ZIP archive and extracts it a folder if GIT isn't available:
 
       a. Download the `pull_files_from_repo.py` file and put it into your environment
 
       b. Execute `python pull_files_from_repo.py` in the folder.
+
+3. If you have GIT available, you can just clone the repo with:
+
+   `git clone https://github.com/DurhamARC-Training/Intermediate-Python.git`
 
 ## Getting started for teaching
 
@@ -42,7 +44,7 @@ To get started with teaching the course, follow these steps:
 
     ```
     conda activate intermediate_python
-    jupyter-lab
+    jupyter lab
     ```
 
 3. Use the `Intermediate.ipynb` for the presentations and exercises to use during the course. If needed, use the `Intermediate_full.ipynb` notebook as lecture notes with solutions.
@@ -55,6 +57,8 @@ To get started with teaching the course, follow these steps:
     * Go to http://localhost:8000/Intermediate.slides.html?print-pdf#/
     * Print via Print to PDF function of your browser
 
-## Contributing
+## How to contribute
 
 If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Contributions are welcome!
+
+If you're a co-developer of our training course, please read the workflow we suggest in our [Developer's Guide](development.md).
