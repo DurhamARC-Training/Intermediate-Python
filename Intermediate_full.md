@@ -837,89 +837,88 @@ In the _Beginner_ level course, we've introduced to _lists_, the most commonly u
 You can learn more about data structures in Python here: : [Python Documentation(Data Structures)](https://docs.python.org/3/tutorial/datastructures.html)
 
 
-## List methods
+## List methods 
+There is a number of useful methods that can be applied to lists, let use this one as example
 
 ```python
-# [TBD]
+lst = [33, 84, 11]
+print(lst)
 ```
 
-```python
-lst = [1, 3.14, "Mars", 'Earth', [1, 2, 3]]
-```
+We can access the number of elements with `len`
 
 ```python
+print(len(lst))
+```
+
+### Adding and removing values
+We can add an element with `insert` and `append`. Notice that this in the grand scheme of things this is slow, so if you can avoid this, you should:
+
+```python
+# add a value
+lst.insert(3, 112)
 print(lst)
 ```
 
 ```python
+# add a value at the end
+lst.append(53)
+print(lst)
+```
+
+removing a specific element
+
+```python
+# remove the value 11
+lst.remove(11)
+print(lst)
+```
+
+### Iterating over lists
+with the `for ... in` construct we can iterate over each element of a list
+
+```python
+# print the values in a list with a for loop
 for i in lst:
     print(i)
 ```
 
+we can iterate over the list starting from the back using `reversed`
+
 ```python
-len(lst)
+for i in reversed(lst):
+    print(i)
+```
+
+and `sorted`, sorts the values
+
+```python
+for i in sorted(lst):
+    print(i)
+```
+
+#### If you want a reversed new list you need to convert the iterator into a list
+
+```python
+# print the iterator
+print(reversed(lst))
 ```
 
 ```python
-lst[0]
+# print the converted list
+print(list(reversed(lst)))
+
 ```
 
-```python
-lst[-1][1]
-```
+### Checking if an item is in a list
+
+with the `in` keyword you can check whether an item is in a list, with `.index(el)` you can get the index of an element
 
 ```python
-if 'Mars' in lst:
-    print('yes')
-```
-
-```python
-lst[0:5:2]
-```
-
-```python
-def product(*i):
-    prod = 1
-    for j in i:
-        prod *= j
-    return prod
-```
-
-```python
-j = product(2,3,4)
-print(j, sep=' ')
-```
-
-```python
-lst = [j for j in range(10) if j%2]
-```
-
-```python
-lst
-```
-
-```python
-lst = []
-```
-
-```python
-lst
-```
-
-```python
-lst.append('hello')
-```
-
-```python
-lst
-```
-
-```python
-lst.append('bye')
-```
-
-```python
-lst
+if 84 in lst:
+    position = lst.index(84)
+    print(f'84 is at index {position}')
+print(lst)
 ```
 
 ## _Tuples_
@@ -966,10 +965,9 @@ print(t2)
 
 The dictionary method `items` returns a list of tuples (see an exercise after _dictionaries_).
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
+
 ## _Sets_
 A _set_ is unordered collection of unique elements, representing a mathematical set. Pythoh stores the data in a set in whatever order it wants to, so indexing has no meaning for sets unlike for lists. It looks like a list, but with no repeats, and is denoted by curly braces (`{}`).
-<!-- #endregion -->
 
 ```python
 # An empty set
@@ -1180,6 +1178,45 @@ Try `items()` method on the dictionary you've created before. Print that out. Wh
 ```python
 print(...)
 ```
+
+### _Exercise 4 (lists)_
+Given this list: 
+
+```python
+numbers = [42, 15, 7, 29, 89, 15]`
+```
+
+Complete these tasks:
+
+```python
+# 1. Print all numbers in reverse order using reversed()
+# Expected output: 15 89 29 7 15 42
+
+
+# 2. Create a new sorted list called 'sorted_numbers' without modifying the original
+# Expected output: [7, 15, 15, 29, 42, 89]
+sorted_numbers = 
+
+
+# 3. Check if 29 is in the list. If it is, print its index position
+# Expected output: "29 is at index 3"
+```
+
+```python
+# solutions
+# 1. 
+for num in reversed(numbers):
+    print(num, end=' ')
+
+# 2.
+sorted_numbers = sorted(numbers)
+
+# 3.
+if 29 in numbers:
+    print(f"29 is at index {numbers.index(29)}")
+
+```
+
 
 # <ins>3.</ins> Advanced string manipulation
 
