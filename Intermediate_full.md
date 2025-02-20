@@ -1746,6 +1746,63 @@ if __name__ == "__main__":
  - Add your own function that returns the sine of a value (you might need to restart the kernel in the tab Kernel-> Restart Kernel) if you have already executed the import.
 <!-- #endregion -->
 
+```python
+# solution
+# this is done with this notebook here, but usually you would create this outside of python in an external editor
+
+module_path = 'mymodule.py'
+
+module_content = """
+def myfunction():
+    print("I will be only printed when the function is called")
+
+print("I will be called on import and execution as a script")
+
+if __name__ == "__main__":
+    print("I will only executed when called as a script")
+"""
+
+with open(module_path, 'w') as fobj:
+    fobj.write(module_content)
+
+```
+
+```python
+# solution cell 2
+import mymodule
+
+```
+
+```python
+# solution cell 3
+mymodule.myfunction()
+```
+
+```python
+# solution cell 3
+# to avoid the kernel restart we output into a second file
+module_path = 'mymodule2.py'
+
+module_content2 = """
+import math
+
+def useless_sine(value):
+
+
+def myfunction():
+    print("I will be only printed when the function is called")
+
+print("I will be called on import and execution as a script")
+
+if __name__ == "__main__":
+    print("I will only executed when called as a script")
+"""
+
+with open(module_path, 'w') as fobj:
+    fobj.write(module_content)
+
+```
+
 # <ins>6.</ins> Brief introduction to classes
 
 
