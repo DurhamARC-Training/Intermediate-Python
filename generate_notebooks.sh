@@ -17,6 +17,6 @@ git submodule update --init --recursive
 python common/filter_md.py Intermediate_full.md Intermediate.md
 
 # Convert both Markdown files into Jupyter notebooks
-#jupytext --to notebook Intermediate_full.md
+jupytext --to notebook Intermediate_full.md
 jupytext --to notebook Intermediate.md
 
