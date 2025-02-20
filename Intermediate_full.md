@@ -12,16 +12,18 @@ jupyter:
     name: python3
 ---
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ARC course "Coding with Python" (Intermediate level)
 ====================================================
 ![icons8-python-48.png](attachment:4bc4187b-d7a8-40d7-9b9b-e39c975e84a1.png)
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 Welcome to our ARC course "Coding with Python" (Intermediate level).
 
 Some general information on how the course will run:
 
-* The course will run for three hours from 10.00 to 13.00. We plan a coffee break between 2 parts at around 11:30 for ~10-15 min.
+* The course will run for three hours from 09:00 to 12:00. We plan a coffee break between 2 parts at around 10:30 for ~10-15 min.
 
 * This material builds upon the knowledge acquired in the previous Beginner level course.
 
@@ -32,17 +34,21 @@ Some general information on how the course will run:
 Upon completion of the course, please, don't forget to scan the activity QR code to record your attendance.
 
 Enjoy coding with Python!
+<!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Set up your Python environment
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 There are several option how you can read and run this Jupyter notebook:
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 #### <ins>Option 1 (preferred)</ins>: The Jupyter Notebook server set up by Daniel Maitre from the Physics department
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 1) Log in with your CIS account (loading process can take some time):
    - https://notebooks.dmaitre.phyip3.dur.ac.uk/arc
 
@@ -50,18 +56,22 @@ There are several option how you can read and run this Jupyter notebook:
    - Go to the repository: https://github.com/DurhamARC-Training/Intermediate-Python
    - Download `pull_files_from_repo.py` file into your environment and upload it to the Jupyter Notebook server
    - Open the terminal on the Jupyter Notebook server and execute `python pull_files_from_repo.py`. It'll upload the entire tutorial from GitHub to the server
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 #### <ins>Option 2 (if the previous one doesn't work)</ins>: Google Colab (https://colab.research.google.com)
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 1) Log in to Google Colab, for example, with your Google account
-2) Open our tutorial by specifying its GitHub URL (https://github.com/DurhamARC-Training/Intermediate-Python) and selecting the notebook (`Intermediate-Python.ipynb`)
+2) Open our tutorial by specifying its GitHub URL (https://github.com/DurhamARC-Training/Intermediate-Python) and selecting the notebook (`Intermediate.ipynb`)
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 #### <ins>Option 3 (if you want to run locally)</ins>: Local Python environment
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 **Install Python**
 
 ---
@@ -130,8 +140,9 @@ There are several option how you can read and run this Jupyter notebook:
      This will open a new tab in your web browser with the **Jupyter Notebook** or **Jupyter Lab** interface, ready for you to start coding!
 
 ---
+<!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "skip"} -->
+<!-- #region editable=false slideshow={"slide_type": "skip"} -->
 \[Optional\] **Using conda:**
 
 Setting up a conda environment for this document
@@ -145,7 +156,7 @@ then start normally via local JupyterLab by calling `jupyter lab`
 ----
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "skip"} -->
+<!-- #region editable=false slideshow={"slide_type": "skip"} -->
 \[Optional\] **Converting the Jupyter notebook to pdf:**
 
 Run cells you want to run
@@ -159,17 +170,19 @@ Go to [](http://localhost:8888/Intermediate_full.slides.html?print-pdf#/
 Print via Print to PDF function of your browser
 <!-- #endregion -->
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
+<!-- #region editable=false jp-MarkdownHeadingCollapsed=true slideshow={"slide_type": "skip"} -->
 ---
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>Table of Contents</ins>
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": ""} -->
   - [0. Introduction](#0.-Introduction)
+    - [Set up your Python environment](#Set-up-your-Python-environment)
     - [Course objectives](#Course-objectives)
     - [Useful resources](#Useful-resources)
-    - [Set up your Python environment](#Set-up-your-Python-environment)
 - [Part I](#Part-I)
   - [1. Recap](#1.-Recap)
   - [2. Data structures](#2.-Data-structures)
@@ -178,14 +191,17 @@ Print via Print to PDF function of your browser
   - [4. Pythonic concepts](#4.-Pythonic-concepts)
   - [5. Introduction to modules](#5.-Introduction-to-modules)
   - [6. Brief introduction to classes](#6.-Brief-introduction-to-classes)
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>0.</ins> Introduction
+<!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Course objectives
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 By the end of this course, you should know:
 
 - How to write more efficient and _Pythonic_ code using advanced language features.
@@ -196,25 +212,30 @@ By the end of this course, you should know:
 - How to import and use _modules_ to extend your programs.
 - How to work with various data structures and understand the concept of _immutability_.
 - How to create and use basic _classes_ to implement object-oriented programming principles.
+<!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Useful resources
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 There are plenty of resources to learn Python in the Internet from. These can be recommended by this tutorial for further learning:
 
 - [The Python Tutorial](https://docs.python.org/3/tutorial/) from Python documentation
 - [Python Cheat Sheets](https://pythononeliners.com/)
 - [Collection of free Python books](https://blog.finxter.com/free-python-books/)
 - [Python tips](https://book.pythontips.com/en/latest/index.html)
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>**Part I**</ins>
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>**1.**</ins> Recap
+<!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 This section is a brief recap of materials covered in the Beginner Python course:
 
 * Data Types, variables, operators
@@ -227,11 +248,11 @@ This section is a brief recap of materials covered in the Beginner Python course
 
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Data Types, variables, operators
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 As with any programming language, Python can deal with many different data types. Among the basic ones are `str` strings, `int` integers, `float` floating-point numbers and `bool` booleans.
 
 * an example of a _numeric_ value, _integer_ value;
@@ -239,148 +260,148 @@ As with any programming language, Python can deal with many different data types
 * normal arithmetic addition
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 #### <u>Numerical</u>
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "fragment"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 | Title | Storage | Smallest Magnitude | Largest Magnitude | Minimum Precision |
 |-------|---------|--------------------|-------------------|-------------------|
 | float | 64 bits | 2.22507 × 10e−308  | 1.79769 × 10+308  | 15 digits         |
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": "fragment"}
+```python editable=true slideshow={"slide_type": ""}
 n = 1 + 2 + 4 + 10 - 3 * 6
 print(n)
 ```
 
-```python editable=true slideshow={"slide_type": "fragment"}
+```python editable=true slideshow={"slide_type": ""}
 type(n) # integer
 ```
 
-```python editable=true slideshow={"slide_type": "fragment"}
+```python editable=true slideshow={"slide_type": ""}
 pi = 3.14159
 print("Pi =", pi)
 ```
 
-```python editable=true slideshow={"slide_type": "fragment"}
+```python editable=true slideshow={"slide_type": ""}
 type(pi) # float
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "fragment"} -->
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 _NOTE_: Scientific notation is supported!
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": "fragment"}
+```python editable=true slideshow={"slide_type": ""}
 avogadros_number = 6.022e23
 c = 2.998e8
 print("Avogadro's number =", avogadros_number)
 print("Speed of light =", c)
 ```
 
-<!-- #region editable=true jp-MarkdownHeadingCollapsed=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=true jp-MarkdownHeadingCollapsed=true slideshow={"slide_type": ""} -->
 Used to store numbers, usually either integers, or floating point numbers.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 #### <u>Boolean</u>
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 b1 = False
 b2 = True
 b = b1 and b2
 print(b)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 type(True) # boolean
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 #### <u>String</u>
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 A string is a series of characters enclosed in quotes, either single or double, used to represent text.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 s = 'Hello, World!'
 s = "Hello, " + "World!"
 print(s)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 type(s) # string
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Holds the value of a data type in memory!
 
 **NOTE:** Please give variables clear and explanative names.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 enrolled_students = 728
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 work_hours = 7.5
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 is_loaded = False
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 welcome_message = "Welcome!"
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 **NOTE:** Values can be overwritten!
 
 If we define a new `welcome_message`, it changes.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 welcome_message = "Welcome, User"
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print(welcome_message)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 ---
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 New values can be obtained by applying operators to old values, for example, mathematical operators on numerical data types `int` or `float`.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**String Concatenation**</u>  
 
 We can combine strings together.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 # String concatenation
 hello_world = "Hello," + " World!"
 print(hello_world)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Logical Operators**</u>  
 We can also determine conditions based on Boolean logic: `and`, `or`, `not`
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 **AND:**
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 a = True
 b = False
 
@@ -390,11 +411,11 @@ else:
     print("At least one False!")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 **OR:**
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 a = True
 b = False
 
@@ -404,11 +425,11 @@ else:
     print("Both False!")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 **NOT:**
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 a = True
 
 if not a:
@@ -417,7 +438,7 @@ else:
     print("It is True!")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Numerical Operators**</u>  
 
 - Numerical data: `+`, `-`, `*`, `/`, `%`, `**`, built-in functions `abs`, ...
@@ -431,83 +452,83 @@ else:
 So, use parenthesis to make sure!
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print("Addition:", 1 + 2)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print("Subtraction:", 1 - 2)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print("Multiplication:", 5 * 10)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print("Division:", 10 / 5)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print("Modulus:", 10 % 3)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 print("Exponentiation:", 2 ** 3)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=true slideshow={"slide_type": "skip"} -->
 ---
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Comments
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Used to write notes or comments about code, as well as description of what the code is doing, or the variables used.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 # A single-line comment!
 welcome_message = "Welcome, User!"
 print(welcome_message)  # Print welcome message
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 '''
 A multi-line comment!
 '''
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 """
 Another multi-line comment!
 """
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## User Input
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 You can use `input()` to read user input: 
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 inputted_variable = float(input())
 print(inputted_variable)  # Print what we just input!
 type(inputted_variable)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=true slideshow={"slide_type": "fragment"} -->
 ---
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Reading and Writing Files
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Opening a File**</u>
 
 Two things to note here:
@@ -521,7 +542,7 @@ Two things to note here:
 [Python Documentation (mode)](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 # Opening and reading a file
 text_file = open('data_file.txt', 'r')
 content = text_file.read()
@@ -529,22 +550,22 @@ print(content)
 text_file.close()
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 _NOTE_: Ensure closure of the file object when working with files in this way, or changes may not be written.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 We can use the context manager (`with`) to allow us to simplify setup and closure of the file.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 # Using a with statement
 with open('data_file.txt', 'r') as text_file:
     content = text_file.read()
     print(content)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Reading from a File**</u>
 
 Here are some file functions for reading from a file:
@@ -553,46 +574,46 @@ Here are some file functions for reading from a file:
 * file.readlines() - Read all lines into a List object
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 with open("data_file.txt") as text_file:
     print(text_file.read())
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 with open("data_file.txt") as text_file:
     print(text_file.readlines())
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Writing to a File**</u>
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 One way we can write to files is using the `write()` function.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 text_file = open("testfile.txt", "w")
 text_file.write("Some words \n")
 text_file.write(str(25))
 text_file.close()
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Using the `with` keyword:
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 with open("testfile.txt", "w") as text_file:
     text_file.write("Some words \n")
     text_file.write(str(25))
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Lists
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Python can work not only with basic data types mentioned before, but also with compound ones. Compound data types in Python are a powerful tool for organizing and storing data. Among the most commonly used is _lists_ which we learned about in the beginner's course.
 
 * [List](https://docs.python.org/3/tutorial/datastructures.html#Lists)
@@ -600,83 +621,83 @@ Python can work not only with basic data types mentioned before, but also with c
 We'll learn about other data structures later today.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 An ordered list of items, accessed by a numerical index (starting at `0`). Elements within a list can be removed, modified, or accessed by their index, and a list can have values added to it.
 
 Defined using square brackets `[]`.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list = [1, 3, 5, 7, 9]  # A list of odd numbers
 print(odd_list)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**List Access**</u>  
 You can access a list using its index value, starting from `0`.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[0]
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[1]
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 _NOTE_: You can access lists in reverse index order, where `-1` is the final index. 
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[-1]
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[-2]
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Slicing**</u>   
 You can also use slicing for specific partial list access.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[1:4] # Slicing from index 1 (inclusive), to 4 (exclusive)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[3:]  # Slicing from index 3 to end.
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[:3]  # Slicing from beginning to index 3
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 odd_list[::2]  # Slicing with a step of 2
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Empty List**</u>   
 You can create empty lists:
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 new_list = []  # An empty list
 print(new_list)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Repetitions and Conditions
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Conditions**</u>  
 In order to control program flow, and whether or not code is executed, we can do conditions based on variable values.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 x = 5
 
 if x > 2:  # If x is GREATER THAN 2
@@ -695,13 +716,13 @@ if x < 4:  # If X is LESS THAN 4
     print("x =", x, "is LESS THAN 4")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Else/Elif**</u>  
 
 We may also specify either/or with `if/else`, and even add extra conditions with `elif`.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 x = 10
 
 if x > 0:
@@ -712,54 +733,54 @@ else:
     print("x is zero")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Repetitions**</u>  
 There are a number of ways for us to repeat lines or blocks of code within our program, to do this we use `loops`:
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>For Each Loop:</u>  
 A for each loop will execute its code for each item specified within the loop definition
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 animal_list = ["Cat", "Dog", "Bird"]
 
 for animal in animal_list:
     print("Current animal is:", animal)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 The above describes `for each animal in animal_list`.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 We are able to use a range-based for loop:
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 for i in range(0, 5):
     print(i * 2) # Here we are manipulating the value each time!
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 for i in range(0, 10, 2):  # Here we define a step of 2!
     print(i)
 ```
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 for i in range(10, 0, -1):  # Counting down from 10, in steps of 1
     print(i)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>While Loop</u>  
 A `while` loop will continue until the defined condition has been met, which can potentially not happen and cause an infinite loop.
 
 Here we are printing `n`, then incrementing it by 1, while `n` is LESS THAN 10.
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 n = 0
 
 while n < 10:
@@ -767,16 +788,16 @@ while n < 10:
     n += 1
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 _NOTE_: The `break` keyword can be used to stop execution of a loop.  
 _NOTE_: Use `ctrl+C` to break execution in your terminal if needed.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=true slideshow={"slide_type": "slide"} -->
 ## Functions
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 A function is a reusable block of code used to perform a specific task.
 
 We define a function using the `def` keyword, then parenthesis, which may contain the function `parameters` or `arguments` (different terms, same thing).
@@ -784,21 +805,21 @@ We define a function using the `def` keyword, then parenthesis, which may contai
 _NOTE_: You should give your functions and arguments explanative names.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Parameters/Arguments**</u>  
 A function can receive 0 or more variables as arguments which are 'passed' through and are used during the execution of the function as required.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 <u>**Returns**</u>  
 A function may return a single variable, or variables, it may also return nothing where it is required to just execute some logic.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Here is a very basic example of a function:
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 def sum_numbers(val_one, val_two):
     """Sums and returns two numbers"""
     return val_one + val_two  # Sum of both numbers
@@ -807,15 +828,15 @@ calculated_value = sum_numbers(1, 1)
 print(calculated_value)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Note that we are able to save the result of `sum_numbers`, to a variable which we have aptly named `calculated_value`, which can be reused later.
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Here we are modifying setting a default value for our `name` argument:
 <!-- #endregion -->
 
-```python
+```python editable=true slideshow={"slide_type": ""}
 def generate_greeting(name='Guest'):
     """
     Generate the default greeting message.
@@ -827,18 +848,21 @@ generate_greeting()
 generate_greeting("User")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 Without specifying the `name` argument, the `generate_greeting` will use the default value specified within the function definition.
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>2.</ins> Data structures
 In the _Beginner_ level course, we've introduced to _lists_, the most commonly used compound data structure in Python. Here, we'll learn about methods for lists and we'll introduce to other data structures: _**dictionaries**_, _**sets**_ and _**tuples**_.
 
 You can learn more about data structures in Python here: : [Python Documentation(Data Structures)](https://docs.python.org/3/tutorial/datastructures.html)
+<!-- #endregion -->
 
-
-## List methods 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+## List methods
 There is a number of useful methods that can be applied to lists, let use this one as example
+<!-- #endregion -->
 
 ```python
 lst = [33, 84, 11]
@@ -921,8 +945,10 @@ if 84 in lst:
 print(lst)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ## _Tuples_
 A _tuple_ is essentially an immutable list. Indexing and slicing work the same as with lists. As with lists, you can get the length of the tuple by using the `len` function, and, like lists, tuples have `count` and `index` methods. However, since a _tuple_ is immutable, it does not have any of the other methods that lists have (such as `sort` or `reverse`). Tuples are enclosed in parentheses (`()`), though the parentheses are actually optional.
+<!-- #endregion -->
 
 ```python
 # An empty tuple
@@ -965,9 +991,10 @@ print(t2)
 
 The dictionary method `items` returns a list of tuples (see an exercise after _dictionaries_).
 
-
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ## _Sets_
 A _set_ is unordered collection of unique elements, representing a mathematical set. Pythoh stores the data in a set in whatever order it wants to, so indexing has no meaning for sets unlike for lists. It looks like a list, but with no repeats, and is denoted by curly braces (`{}`).
+<!-- #endregion -->
 
 ```python
 # An empty set
@@ -1015,7 +1042,7 @@ s = {i**2 for i in range(12)}
 print(s)
 ```
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Example 1_
 Removing repeated elements from lists
 <!-- #endregion -->
@@ -1026,7 +1053,7 @@ L = list(set(L))
 print(L)
 ```
 
-<!-- #region jp-MarkdownHeadingCollapsed=true -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Example 2_
 Wordplay: an example of an `if` statement that uses a `set` to see if every letter in a
 word is either an `a`, `b`, `c`, `d`, or `e`:
@@ -1036,7 +1063,7 @@ word is either an `a`, `b`, `c`, `d`, or `e`:
 if set(word).containedin( 'abcde '):
 ```
 
-<!-- #region editable=true jp-MarkdownHeadingCollapsed=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ## _Dictionaries_
 A _dictionary_ is an unordered collection of key-value pairs, representing flexible mapping of keys to values. It's like a more general version of a list. In other words, it's an associative container permitting access based on a key, not an index. Dictionary items are colon-connected (`:`) key-value pairs enclosed by curly braces (`{}`).
 <!-- #endregion -->
@@ -1085,8 +1112,10 @@ my_dict['volume'] = 100.0
 my_dict
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Example_
 Extending a list to a dictionary
+<!-- #endregion -->
 
 ```python
 # A list containing the number of days in the months of the year
@@ -1099,8 +1128,9 @@ print(f"In January, there are {days[0]} days")
 print(f"In June, there are {days[5]} days")
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ## Notes on _lists_, _strings_, _tuples_, _sets_, and  _dictionaries_
-
+<!-- #endregion -->
 
 * **_Lists_** and **_dictionaries_** are _mutable_, which means their contents can be changed.
 * **_Strings_** and **_tuples_** are _immutable_, which means they cannot be changed.
@@ -1135,12 +1165,13 @@ L[0] = 9
 print( 'L is now: ', L, 'Copy: ', copy)
 ```
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Have a Play!
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Exercise 1 (dictionaries)_
-
+<!-- #endregion -->
 
 1) Create a dictionary of the days in the months of the year.
 2) Print out the number of the days for any month as it was done for lists.
@@ -1149,7 +1180,9 @@ print( 'L is now: ', L, 'Copy: ', copy)
 days = ...
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Exercise 2 (dictionaries)_
+<!-- #endregion -->
 
 <!-- #region jp-MarkdownHeadingCollapsed=true -->
 1. Create a dictionary of several countries and capitals. Think about what's going to be a key and a value.
@@ -1170,8 +1203,9 @@ capitals[...] = ...
 ...
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Exercise 3 (tuples)_
-
+<!-- #endregion -->
 
 Try `items()` method on the dictionary you've created before. Print that out. What kind of data structure does it return?
 
@@ -1179,7 +1213,10 @@ Try `items()` method on the dictionary you've created before. Print that out. Wh
 print(...)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Exercise 4 (lists)_
+<!-- #endregion -->
+
 Given this list: 
 
 ```python
@@ -1217,9 +1254,9 @@ if 29 in numbers:
 
 ```
 
-
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>3.</ins> Advanced string manipulation
-
+<!-- #endregion -->
 
 * Adjusting case
 * Formatting strings
@@ -1229,9 +1266,11 @@ line = "the quick brown fox jumped over a lazy dog"
 print(line.find('fox'))
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>**Part II**</ins>
+<!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>4.</ins> Pythonic concepts
 * _Comprehensions_
 * _Conditional expressions_
@@ -1239,11 +1278,13 @@ print(line.find('fox'))
 * _Lambdas_ - anonymous functions
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## _Comprehensions_
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### `list` comprehensions
-
+<!-- #endregion -->
 
 Multiples of three:
 
@@ -1268,7 +1309,9 @@ squared = [x**2 for x in range(10)]
 print(squared)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### `dict` comprehensions
+<!-- #endregion -->
 
 ```python
 mcase = {'a': 10, 'b': 34, 'A': 7, 'Z': 3}
@@ -1279,15 +1322,18 @@ mcase_frequency = {
 print(mcase_frequency)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### `set` comprehensions
+<!-- #endregion -->
 
 ```python
 squared = {x**2 for x in [1, 1, 2]}
 print(squared)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## _Conditional expressions_
-
+<!-- #endregion -->
 
 They are known as _ternary operators_ in other languages. They became a part of Python from version 2.4
 
@@ -1327,7 +1373,7 @@ my_function("John")
 my_function("Mike", "anonymous123")
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## _Advanced function arguments_
 <!-- #endregion -->
 
@@ -1413,8 +1459,9 @@ flower_dict['colour'] = 'red'
 flower_output(**flower_dict)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## _Iterators_ beneath control flows
-
+<!-- #endregion -->
 
 But what is the for loop doing under the hood?
 
@@ -1457,8 +1504,9 @@ next(it)
 next(it)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## _Lambda_ functions
-
+<!-- #endregion -->
 
 **_Lambda functions_** for compact inline function definitions. Useful when you don’t want to use a function twice:
 
@@ -1473,7 +1521,9 @@ add = lambda x, y: x + y
 print(add(3, 5))
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 _Example_: List sorting
+<!-- #endregion -->
 
 ```python
 a = [(1, 2), (4, 1), (9, 10), (13, -3)]
@@ -1481,7 +1531,9 @@ a.sort(key=lambda x: x[1])
 print(a)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 _Example_: Parallel sorting of lists
+<!-- #endregion -->
 
 ```python
 list1 = ["New York", "Moscow", "Tokyo"]
@@ -1512,7 +1564,7 @@ squared = list(map(lambda x: x**3, items))
 print(squared)
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Have a play!
 
 #### List Comprehension Basics
@@ -1605,12 +1657,14 @@ sorted_people = # Your code here
 sorted_people = sorted(people, key=lambda x: x['age'])
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>5.</ins> Introduction to modules
 A _module_ is a single file (or collection of files) that is intended to be imported and used in other Python programs. It can include functions, classes, variables, and runnable code.
+<!-- #endregion -->
 
-
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Importing _modules_
-
+<!-- #endregion -->
 
 Python comes with hundreds of _modules_ doing all sorts of things. Also, many 3rd-party modules are available to download from the Internet.
 
@@ -1669,8 +1723,9 @@ dir(math)
 help(math)
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Some useful _modules_
-
+<!-- #endregion -->
 
 Python comes with a program called pip which will automatically fetch packages released and listed on PyPI: `pip install <some-module>`
 
@@ -1692,12 +1747,14 @@ Python comes with a program called pip which will automatically fetch packages r
 | **`itertools`**  | provides a generator-like object named `permutations`
 | **`csv`**        | parsing and writing `csv` files
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Using _modules_
 <!-- #endregion -->
 
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### _Example_
 Interfacing with the operating system: **`os`**
+<!-- #endregion -->
 
 ```python
 import os
@@ -1741,7 +1798,7 @@ with open ("example.csv", 'r') as in_f:
             break
 ```
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Building your own module
 
   - If you have a .py file in a path that is available to python, you can import any object defined in that file.
@@ -1752,7 +1809,7 @@ with open ("example.csv", 'r') as in_f:
     `from mymodule import my_function`
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### ```__main__``` special built-in variable
 So python files can be executed with 
 `python mymodule.py` or loaded from with `import`
@@ -1763,7 +1820,7 @@ It is good practice to have all code executed in a script to be either in a func
 
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 
 ### Example content of `mymodule.py`:
 ```python
@@ -1777,7 +1834,7 @@ if __name__ == "__main__":
 ```
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Have a play!
 
  - try to put the example content from the last slide into a mymodule.py in your folder and import `myfunction` into this notebook
@@ -1841,8 +1898,9 @@ with open(module_path, 'w') as fobj:
 
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>6.</ins> Brief introduction to classes
-
+<!-- #endregion -->
 
 [TBD] See `class.py`
 
@@ -1991,4 +2049,6 @@ car1.display_info()
 
 ```
 
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Have a play!
+<!-- #endregion -->
