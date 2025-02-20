@@ -129,25 +129,11 @@ There are several option how you can read and run this Jupyter notebook:
 
      This will open a new tab in your web browser with the **Jupyter Notebook** or **Jupyter Lab** interface, ready for you to start coding!
 
-```python
-reset
-```
-
-```python editable=true slideshow={"slide_type": "skip"}
-### Installation steps for JupyterLab
-```
+---
 
 <!-- #region editable=true slideshow={"slide_type": "skip"} -->
-<u>**Using pip:**</u>  
-You can install and run JupyterLab using only pip, which comes with Python:
+\[Optional\] **Using conda:**
 
-* `pip install jupyterlab`  
-  THEN
-* `jupyter lab`
-<!-- #endregion -->
-
-<!-- #region editable=true slideshow={"slide_type": "skip"} -->
-<u>**Using conda:**</u>  
 Setting up a conda environment for this document
 
 ```
@@ -155,15 +141,21 @@ conda create -n python_intermediate -c conda-forge jupyter jupyterlab
 ```
 
 then start normally via local JupyterLab by calling `jupyter lab`
+
+----
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": "skip"} -->
-<u>**Convert to pdf:**</u>
+\[Optional\] **Converting the Jupyter notebook to pdf:**
 
 Run cells you want to run
+
 Be sure to save
-Call `jupyter nbconvert --to slides --post serve ./Intermediate_examples.ipynb`
-Go to [](http://localhost:8000/Basics.slides.html?print-pdf#/
+
+Call `jupyter nbconvert --to slides --post serve ./Intermediate_full.ipynb`
+
+Go to [](http://localhost:8888/Intermediate_full.slides.html?print-pdf#/
+
 Print via Print to PDF function of your browser
 <!-- #endregion -->
 
@@ -180,11 +172,11 @@ Print via Print to PDF function of your browser
     - [Set up your Python environment](#Set-up-your-Python-environment)
 - [Part I](#Part-I)
   - [1. Recap](#1.-Recap)
-  - [2. Data structures and containers](#2.-Data-structures-and-containers)
+  - [2. Data structures](#2.-Data-structures)
   - [3. Advanced string manipulation](#3.-Advanced-string-manipulation)
 - [Part II](#Part-II)
   - [4. Pythonic concepts](#4.-Pythonic-concepts)
-  - [5. Introduction to libraries and modules](#5.-Introduction-to-libraries-and-modules)
+  - [5. Introduction to modules](#5.-Introduction-to-modules)
   - [6. Brief introduction to classes](#6.-Brief-introduction-to-classes)
 
 
@@ -226,7 +218,7 @@ This section is a brief recap of materials covered in the Beginner Python course
 * Comments
 * User input
 * Reading and Writing Files
-* Data Structures
+* Lists
 * Repetitions and Conditions
 * Functions
 
@@ -594,7 +586,7 @@ with open("testfile.txt", "w") as text_file:
 ```
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
-## Data Structures
+## Lists
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
@@ -602,11 +594,7 @@ Python can work not only with basic data types mentioned before, but also with c
 
 * [List](https://docs.python.org/3/tutorial/datastructures.html#Lists)
 
-Other data structures are available: [Python Documentation(Data Structures)](https://docs.python.org/3/tutorial/datastructures.html)
-<!-- #endregion -->
-
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
-### <u>List</u>
+We'll learn about other data structures later today.
 <!-- #endregion -->
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
@@ -840,11 +828,98 @@ generate_greeting("User")
 Without specifying the `name` argument, the `generate_greeting` will use the default value specified within the function definition.
 <!-- #endregion -->
 
-# <ins>2.</ins> Data structures and containers
-In the _Beginner_ level course, we've introduced to _lists_, the most commonly used compound data structure in Python. Here, we'll introduce to _**dictionaries**_, _**sets**_ and _**tuples**_.
+# <ins>2.</ins> Data structures
+In the _Beginner_ level course, we've introduced to _lists_, the most commonly used compound data structure in Python. Here, we'll learn about methods for lists and we'll introduce to other data structures: _**dictionaries**_, _**sets**_ and _**tuples**_.
+
+You can learn more about data structures in Python here: : [Python Documentation(Data Structures)](https://docs.python.org/3/tutorial/datastructures.html)
 
 
-## Tuples
+## List methods
+
+```python
+# [TBD]
+```
+
+```python
+lst = [1, 3.14, "Mars", 'Earth', [1, 2, 3]]
+```
+
+```python
+print(lst)
+```
+
+```python
+for i in lst:
+    print(i)
+```
+
+```python
+len(lst)
+```
+
+```python
+lst[0]
+```
+
+```python
+lst[-1][1]
+```
+
+```python
+if 'Mars' in lst:
+    print('yes')
+```
+
+```python
+lst[0:5:2]
+```
+
+```python
+def product(*i):
+    prod = 1
+    for j in i:
+        prod *= j
+    return prod
+```
+
+```python
+j = product(2,3,4)
+print(j, sep=' ')
+```
+
+```python
+lst = [j for j in range(10) if j%2]
+```
+
+```python
+lst
+```
+
+```python
+lst = []
+```
+
+```python
+lst
+```
+
+```python
+lst.append('hello')
+```
+
+```python
+lst
+```
+
+```python
+lst.append('bye')
+```
+
+```python
+lst
+```
+
+## _Tuples_
 A _tuple_ is essentially an immutable list. Indexing and slicing work the same as with lists. As with lists, you can get the length of the tuple by using the `len` function, and, like lists, tuples have `count` and `index` methods. However, since a _tuple_ is immutable, it does not have any of the other methods that lists have (such as `sort` or `reverse`). Tuples are enclosed in parentheses (`()`), though the parentheses are actually optional.
 
 ```python
@@ -888,8 +963,80 @@ print(t2)
 
 The dictionary method `items` returns a list of tuples (see an exercise after _dictionaries_).
 
-<!-- #region editable=true slideshow={"slide_type": "slide"} -->
-## Dictionaries
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+## _Sets_
+A _set_ is unordered collection of unique elements, representing a mathematical set. Pythoh stores the data in a set in whatever order it wants to, so indexing has no meaning for sets unlike for lists. It looks like a list, but with no repeats, and is denoted by curly braces (`{}`).
+<!-- #endregion -->
+
+```python
+# An empty set
+my_set = set()
+my_set
+```
+
+```python
+# Initialising a set
+my_set = {1, 2, 3, 4, 5}
+my_set
+```
+
+```python
+# Converting a list to a set
+set([1,4,4,4,5,1,2,1,3])
+```
+
+```python
+# Converting a string to a set
+set('this is a string')
+```
+
+There are a few operators that work with sets as well as some useful methods:
+
+| Operator | Description          | Example                        |
+|----------|----------------------|--------------------------------|
+| `\|`     | union                | `{1,2,3} \| {3,4} → {1,2,3,4}` |
+| `&`      | intersection         | `{1,2,3} & {3,4} → {3}`        |
+| `-`      | difference           | `{1,2,3} - {3,4} → {1,2}`      |
+| `^`      | symmetric difference | `{1,2,3} ^ {3,4} → {1,2,4}`    |
+| `in`     | is an element of     | `3 in {1,2,3} → True`          |
+
+| Method            | Description                                   |
+|-------------------|-----------------------------------------------|
+| `S.add(x)`        | Add `x` to the set                            |
+| `S.remove(x)`     | Remove `x` from the set                       |
+| `S.issubset(A)`   | Returns `True` if S ⊂ A and `False` otherwise |
+| `S.issuperset(A)` | Returns `True` if A ⊂ S and `False` otherwise |
+
+There are also _set comprehensions_ just like list comprehensions.
+
+```python
+s = {i**2 for i in range(12)}
+print(s)
+```
+
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+### _Example 1_
+Removing repeated elements from lists
+<!-- #endregion -->
+
+```python
+L = [1,4,4,4,5,1,2,1,3]
+L = list(set(L))
+print(L)
+```
+
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+### _Example 2_
+Wordplay: an example of an `if` statement that uses a `set` to see if every letter in a
+word is either an `a`, `b`, `c`, `d`, or `e`:
+<!-- #endregion -->
+
+```python
+if set(word).containedin( 'abcde '):
+```
+
+<!-- #region editable=true jp-MarkdownHeadingCollapsed=true slideshow={"slide_type": "slide"} -->
+## _Dictionaries_
 A _dictionary_ is an unordered collection of key-value pairs, representing flexible mapping of keys to values. It's like a more general version of a list. In other words, it's an associative container permitting access based on a key, not an index. Dictionary items are colon-connected (`:`) key-value pairs enclosed by curly braces (`{}`).
 <!-- #endregion -->
 
@@ -951,77 +1098,11 @@ print(f"In January, there are {days[0]} days")
 print(f"In June, there are {days[5]} days")
 ```
 
-## Sets
-A _set_ is unordered collection of unique elements, representing a mathematical set. Pythoh stores the data in a set in whatever order it wants to, so indexing has no meaning for sets unlike for lists. It looks like a list, but with no repeats, and is denoted by curly braces (`{}`).
-
-```python
-# An empty set
-my_set = set()
-my_set
-```
-
-```python
-# Initialising a set
-my_set = {1, 2, 3, 4, 5}
-my_set
-```
-
-```python
-# Converting a list to a set
-set([1,4,4,4,5,1,2,1,3])
-```
-
-```python
-# Converting a string to a set
-set('this is a string')
-```
-
-There are a few operators that work with sets as well as some useful methods:
-
-| Operator | Description          | Example                        |
-|----------|----------------------|--------------------------------|
-| `\|`     | union                | `{1,2,3} \| {3,4} → {1,2,3,4}` |
-| `&`      | intersection         | `{1,2,3} & {3,4} → {3}`        |
-| `-`      | difference           | `{1,2,3} - {3,4} → {1,2}`      |
-| `^`      | symmetric difference | `{1,2,3} ^ {3,4} → {1,2,4}`    |
-| `in`     | is an element of     | `3 in {1,2,3} → True`          |
-
-| Method            | Description                                   |
-|-------------------|-----------------------------------------------|
-| `S.add(x)`        | Add `x` to the set                            |
-| `S.remove(x)`     | Remove `x` from the set                       |
-| `S.issubset(A)`   | Returns `True` if S ⊂ A and `False` otherwise |
-| `S.issuperset(A)` | Returns `True` if A ⊂ S and `False` otherwise |
-
-There are also _set comprehensions_ just like list comprehensions.
-
-```python
-s = {i**2 for i in range(12)}
-print(s)
-```
-
-### _Example 1_
-Removing repeated elements from lists
-
-```python
-L = [1,4,4,4,5,1,2,1,3]
-L = list(set(L))
-print(L)
-```
-
-### _Example 2_
-Wordplay: an example of an `if` statement that uses a `set` to see if every letter in a
-word is either an `a`, `b`, `c`, `d`, or `e`:
-
-```python
-if set(word).containedin( 'abcde '):
-```
-
-## Notes on list, strings, dictionaries, sets, and tuples
+## Notes on _lists_, _strings_, _tuples_, _sets_, and  _dictionaries_
 
 
 * **_Lists_** and **_dictionaries_** are _mutable_, which means their contents can be changed.
-* **_String_** and **_tuples_** are _immutable_, which means they cannot be changed.
+* **_Strings_** and **_tuples_** are _immutable_, which means they cannot be changed.
 * **_Lists_** are typically for homogeneous data sequences (ingredients, names) whereas **_tuples_** are ideal for heterogeneous data (entries with different meanings).
 
 
@@ -1112,105 +1193,15 @@ print(line.find('fox'))
 
 <!-- #region editable=true slideshow={"slide_type": "slide"} -->
 # <ins>4.</ins> Pythonic concepts
-* list methods, list comprehension, conditional assignments (ternary conditional expressions);
-* iterators (how control flow are actually implemented);
-* lambda functions
+* _Comprehensions_
+* _Conditional expressions_
+* How control flow are actually implemented - _iterators_
+* _Lambdas_ - anonymous functions
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": "subslide"} -->
-## Lists methods
-[TBD]
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+## _Comprehensions_
 <!-- #endregion -->
-
-```python
-lst = [1, 3.14, "Mars", 'Earth', [1, 2, 3]]
-```
-
-```python
-print(lst)
-```
-
-```python
-for i in lst:
-    print(i)
-```
-
-```python
-len(lst)
-```
-
-```python
-lst[0]
-```
-
-```python
-lst[-1][1]
-```
-
-```python
-if 'Mars' in lst:
-    print('yes')
-```
-
-```python
-lst[0:5:2]
-```
-
-```python
-def product(*i):
-    prod = 1
-    for j in i:
-        prod *= j
-    return prod
-```
-
-```python
-j = product(2,3,4)
-print(j, sep=' ')
-```
-
-```python
-lst = [j for j in range(10) if j%2]
-```
-
-```python
-lst
-```
-
-```python
-lst = []
-```
-
-```python
-lst
-```
-
-```python
-lst.append('hello')
-```
-
-```python
-lst
-```
-
-```python
-lst.append('bye')
-```
-
-```python
-lst
-```
-
-```python
-import math
-```
-
-```python
-print(math.sqrt(16))
-```
-
-## Comprehensions
-
 
 ### `list` comprehensions
 
@@ -1256,8 +1247,9 @@ squared = {x**2 for x in [1, 1, 2]}
 print(squared)
 ```
 
-## Conditional expressions
-
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+## _Conditional expressions_
+<!-- #endregion -->
 
 They are known as _ternary operators_ in other languages. They became a part of Python from version 2.4
 
@@ -1297,8 +1289,9 @@ my_function("John")
 my_function("Mike", "anonymous123")
 ```
 
-## Iterators beneath control flows
-
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+## _Iterators_ beneath control flows
+<!-- #endregion -->
 
 But what is the for loop doing under the hood?
 
@@ -1341,8 +1334,9 @@ next(it)
 next(it)
 ```
 
-## Lambda functions
-
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
+## _Lambda_ functions
+<!-- #endregion -->
 
 **_Lambda functions_** for compact inline function definitions. Useful when you don’t want to use a function twice:
 
@@ -1396,10 +1390,11 @@ squared = list(map(lambda x: x**3, items))
 print(squared)
 ```
 
+<!-- #region jp-MarkdownHeadingCollapsed=true -->
 ## Have a play!
+<!-- #endregion -->
 
-
-# <ins>5.</ins> Introduction to libraries and modules
+# <ins>5.</ins> Introduction to modules
 A _module_ is a single file (or collection of files) that is intended to be imported and used in other Python programs. It can include functions, classes, variables, and runnable code.
 
 
