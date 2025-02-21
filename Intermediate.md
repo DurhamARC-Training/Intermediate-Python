@@ -150,37 +150,8 @@ There are several option how you can read and run this Jupyter notebook:
 ---
 <!-- #endregion -->
 
-<!-- #region editable=false slideshow={"slide_type": "skip"} -->
-\[Optional\] **Using conda:**
 
-Setting up a conda environment for this document
 
-```
-conda create -n python_intermediate -c conda-forge jupyter jupyterlab
-```
-
-then start normally via local JupyterLab by calling `jupyter lab`
-
-----
-<!-- #endregion -->
-
-<!-- #region editable=false slideshow={"slide_type": "skip"} -->
-\[Optional\] **Converting the Jupyter notebook to pdf:**
-
-Run cells you want to run
-
-Be sure to save
-
-Call `jupyter nbconvert --to slides --post serve ./Intermediate_full.ipynb`
-
-Go to [](http://localhost:8888/Intermediate_full.slides.html?print-pdf#/
-
-Print via Print to PDF function of your browser
-<!-- #endregion -->
-
-<!-- #region editable=false jp-MarkdownHeadingCollapsed=true slideshow={"slide_type": "skip"} -->
----
-<!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": "slide"} -->
 # <ins>Table of Contents</ins>
@@ -1498,16 +1469,8 @@ sorted_numbers =
 ```python editable=true slideshow={"slide_type": ""}
 # solutions
 # 1. 
-for num in reversed(numbers):
-    print(num, end=' ')
-
 # 2.
-sorted_numbers = sorted(numbers)
-
 # 3.
-if 29 in numbers:
-    print(f"29 is at index {numbers.index(29)}")
-
 ```
 <!-- #endsolution -->
 
@@ -1977,8 +1940,6 @@ Hint Remember the `range()` function and modulo operator `%`
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # Solution
-even_numbers = [x for x in range(1, 21) if x % 2 == 0]
-even_numbers
 ```
 <!-- #endsolution -->
 
@@ -1999,9 +1960,6 @@ fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # Solution:
-fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
-doubled_fruits = {fruit: amount * 2 for fruit, amount in fruits.items()}
-doubled_fruits
 ```
 <!-- #endsolution -->
 
@@ -2022,9 +1980,6 @@ def check_number(num):
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # solution
-def check_number(num):
-    return 'positive' if num > 0 else 'negative' if num < 0 else 'zero'
-check_number(5)
 ```
 <!-- #endsolution -->
 
@@ -2048,8 +2003,6 @@ def combine_strings(*args):
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # solution:
-def combine_strings(*args):
-    return ' '.join(args)
 ```
 <!-- #endsolution -->
 
@@ -2076,7 +2029,6 @@ sorted_people = # Your code here
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # solution
-sorted_people = sorted(people, key=lambda x: x['age'])
 ```
 <!-- #endsolution -->
 
@@ -2299,37 +2251,18 @@ if __name__ == "__main__":
 ```python editable=true slideshow={"slide_type": ""}
 # solution
 # this is done with this notebook here, but usually you would create this outside of python in an external editor
-
-module_path = 'mymodule.py'
-
-module_content = """
-def myfunction():
-    print("I will be only printed when the function is called")
-
-print("I will be called on import and execution as a script")
-
-if __name__ == "__main__":
-    print("I will only executed when called as a script")
-"""
-
-with open(module_path, 'w') as fobj:
-    fobj.write(module_content)
-
 ```
 <!-- #endsolution -->
 
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # solution cell 2
-import mymodule
-
 ```
 <!-- #endsolution -->
 
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # solution cell 3
-mymodule.myfunction()
 ```
 <!-- #endsolution -->
 
@@ -2337,26 +2270,6 @@ mymodule.myfunction()
 ```python editable=true slideshow={"slide_type": ""}
 # solution cell 4
 # to avoid the kernel restart we output into a second file
-module_path = 'mymodule2.py'
-
-module_content2 = """
-import math
-
-def useless_sine(value):
-
-
-def myfunction():
-    print("I will be only printed when the function is called")
-
-print("I will be called on import and execution as a script")
-
-if __name__ == "__main__":
-    print("I will only executed when called as a script")
-"""
-
-with open(module_path, 'w') as fobj:
-    fobj.write(module_content)
-
 ```
 <!-- #endsolution -->
 
@@ -2519,43 +2432,8 @@ class Car:
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # solution
-class Car:
-    def __init__(self, make, model, year, color, mileage, num):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.color = color
-        self.mileage = mileage
-        self.num = num
-
-    def drive(self, distance):
-        self.mileage += distance
-
-    def paint(self, new_color):
-        self.color = new_color
-
-    def re_register(self, new_num):
-        self.num = new_num
-
-    def display_info(self):
-        print(f"Make: {self.make}")
-        print(f"Model: {self.model}")
-        print(f"Year: {self.year}")
-        print(f"Color: {self.color}")
-        print(f"Mileage: {self.mileage}")
-        print(f"plate number: {self.num}")
-
-
 # Test the Car class
-car1 = Car("Toyota", "Camry", 2020, "Blue", 15000, "DUR 888")
-car1.display_info()
-
-car1.drive(100)
-car1.paint("Red")
-car1.display_info()
 ################
-car1.re_register('DUR 666')
-car1.display_info()
 ```
 <!-- #endsolution -->
 
