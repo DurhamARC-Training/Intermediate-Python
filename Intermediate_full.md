@@ -1069,6 +1069,18 @@ print(lst)
 <!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+### Emptying a list
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+print(lst.clear())
+```
+
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+---
+<!-- #endregion -->
+
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ## _Tuples_
 A _tuple_ is essentially an immutable list. Indexing and slicing work the same as with lists. As with lists, you can get the length of the tuple by using the `len` function, and, like lists, tuples have `count` and `index` methods. However, since a _tuple_ is immutable, it does not have any of the other methods that lists have (such as `sort` or `reverse`). Tuples are enclosed in parentheses (`()`), though the parentheses are actually optional.
 <!-- #endregion -->
@@ -1280,13 +1292,78 @@ print(f"In June, there are {days[5]} days")
 ## Notes on _lists_, _strings_, _tuples_, _sets_, and  _dictionaries_
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region editable=false slideshow={"slide_type": ""} -->
 * **_Lists_** and **_dictionaries_** are _mutable_, which means their contents can be changed.
 * **_Strings_** and **_tuples_** are _immutable_, which means they cannot be changed.
 * **_Lists_** are typically for homogeneous data sequences (ingredients, names) whereas **_tuples_** are ideal for heterogeneous data (entries with different meanings).
 <!-- #endregion -->
 
-<!-- #region editable=true slideshow={"slide_type": ""} -->
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+Similarities of _lists_ and _strings_:
+* `len` function: the number of items in a list/string
+* `in` operator: tells if a list/string contains something
+* `+` and `*` operators: concatenating and repeating
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+[7, 8] + [3, 4, 5]
+```
+
+```python editable=true slideshow={"slide_type": ""}
+[0] * 5
+```
+
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+---
+* _Indexing_: simple to "grab" an item/character in a list/string if you know where it sits
+* _Slicing_: use `:` to "grab" a range defined subsection of a list/string:
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+a_lst = ['a','b','c','d','e','f','g','h','i','j']
+print(a_lst[4])
+a_str = "abcdefghij"
+print(a_str[4])
+start=3
+stop=7
+# items start to stop-1
+print(a_lst[start:stop])
+print(a_str[start:stop])
+# items start to the end of list/string
+print(a_lst[start:])
+print(a_str[start:])
+# items from beginning of list/string to stop-1
+print(a_lst[:stop])
+print(a_str[:stop])
+# whole list/string
+print(a_lst[:])
+print(a_str[:])
+```
+
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+---
+* _Looping_:
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+for i in range(len(a_lst)):
+    print(a_lst[i])
+```
+```python editable=true slideshow={"slide_type": ""}
+for item in a_lst:
+    print(item)
+```
+```python editable=true slideshow={"slide_type": ""}
+for i in range(len(a_str)):
+    print(a_str[i])
+```
+```python editable=true slideshow={"slide_type": ""}
+for item in a_str:
+    print(item)
+```
+
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+---
 _Lists_ and _strings_ behave differently when we try to make copies.
 <!-- #endregion -->
 
@@ -1443,11 +1520,67 @@ if 29 in numbers:
 <!-- #region editable=false slideshow={"slide_type": ""} -->
 * Adjusting case
 * Formatting strings
+  - _Note_: Modification requires assignment, because these functions return a copy, not modifying the original string
+* `find()` and `index()`: return index of a substring, but the latter raises a `ValueError` exception when not found (_exception handling_)
+* Quering the existence, replacing, splitting
 <!-- #endregion -->
 
 ```python editable=true slideshow={"slide_type": ""}
 line = "the quick brown fox jumped over a lazy dog"
 print(line.find('fox'))
+print(line.startswith('the'))
+print(line.endswith('fox'))
+print(line.replace('brown', 'red'))
+print(line.split())
+try:
+    index = line.index('bear')
+    print(index)
+except ValueError:
+    print("A bear isn't mentioned in the text")
+```
+
+```python editable=true slideshow={"slide_type": ""}
+arc_update = "ThE HAmILton suPERcompUTER is beiNg UPGraded"
+print(arc_update.upper())
+print(arc_update.title())
+print(arc_update.capitalize())
+print(arc_update)
+arc_update = "   RSE   "
+print(arc_update.strip())
+print(arc_update.rstrip())
+print(arc_update.lstrip())
+```
+
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+---
+<!-- #endregion -->
+
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+* The canonical way to search a string (if not interested in the index) is very simple:
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+line = "the quick brown fox jumped over a lazy dog"
+if "fox" in line:
+    print("A fox has been seen")
+```
+
+<!-- #region editable=false slideshow={"slide_type": "fragment"} -->
+---
+* _F-strings_ provide a way to embed expressions inside string literals, using a minimal syntax
+  - expressions are evaluated at runtime and replaced with their values
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+interests = ["football", "zoom"]
+print(f"Bob enjoys {interests[0]} and {interests[1]}")
+
+weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+for weekday in weekdays:
+    print(f"Today is {weekday}")
+
+age = 70
+print(f"Soon I'll be {age+1}!")
 ```
 
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
