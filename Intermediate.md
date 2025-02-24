@@ -1384,9 +1384,17 @@ print( 'L is now: ', L, 'Copy: ', copy)
 2) Print out the number of the days for any month as it was done for lists.
 <!-- #endregion -->
 
+
+<!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-days = ...
+# Create the dictionary with months as keys and days as values
+
+# Ask the user for a month
+
+# Print the number of days for the entered month
+
 ```
+<!-- #endsolution -->
 
 <!-- #region editable=true slideshow={"slide_type": ""} -->
 ---
@@ -1403,17 +1411,16 @@ days = ...
 3. Print out the whole dictionary line by line in a loop each representing a country and its capital respectfully.
 <!-- #endregion -->
 
+<!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# finish the lines below
+# 1) Create a dictionary of countries and their respective capitals
 
-# create a dictionary
-capitals = ...
-# add a new country and its capital
-capitals[...] = ...
+# 2) Add new countries with their capitals
 
-# print information about countries and their capitals
-...
+# 3) Print out each country and its capital
+
 ```
+<!-- #endsolution -->
 
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 ---
@@ -1427,9 +1434,17 @@ capitals[...] = ...
 Try `items()` method on the dictionary you've created before. Print that out. What kind of data structure does it return?
 <!-- #endregion -->
 
+<!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-print(...)
+# Get the items() of the dictionary
+
+# Print the result
+
+# Print the type of the returned data structure
+
 ```
+<!-- #endsolution -->
+
 
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 ---
@@ -1444,33 +1459,24 @@ Given this list:
 <!-- #endregion -->
 
 ```python editable=true slideshow={"slide_type": ""}
-numbers = [42, 15, 7, 29, 89, 15]`
+numbers = [42, 15, 7, 29, 89, 15]
 ```
 
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 Complete these tasks:
 <!-- #endregion -->
 
+<!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
 # 1. Print all numbers in reverse order using reversed()
 # Expected output: 15 89 29 7 15 42
 
-
 # 2. Create a new sorted list called 'sorted_numbers' without modifying the original
 # Expected output: [7, 15, 15, 29, 42, 89]
-sorted_numbers = 
-
 
 # 3. Check if 29 is in the list. If it is, print its index position
 # Expected output: "29 is at index 3"
-```
 
-<!-- #solution -->
-```python editable=true slideshow={"slide_type": ""}
-# solutions
-# 1. 
-# 2.
-# 3.
 ```
 <!-- #endsolution -->
 
@@ -1933,13 +1939,11 @@ Create a list of even numbers between 1 and 20 using a list comprehension.
 Hint Remember the `range()` function and modulo operator `%`
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": ""}
-
-```
-
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# Solution
+# Uncomment below and continue with your solution:
+#even_numbers =
+
 ```
 <!-- #endsolution -->
 
@@ -1952,14 +1956,11 @@ Hint Remember the `range()` function and modulo operator `%`
 Given this dictionary of fruits and their quantities, create a now dictionary where the number of fruits are doubled
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": ""}
-fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
-
-```
-
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# Solution:
+# Uncomment below and continue with your solution:
+#fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
+
 ```
 <!-- #endsolution -->
 
@@ -1972,14 +1973,12 @@ fruits = {'apple': 5, 'banana': 3, 'orange': 2, 'pear': 1}
 Write a function that takes a number and returns 'positive' if > 0, 'negative' if < 0, and 'zero' if 0, using a conditional expression.
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": ""}
-def check_number(num):
-    return # Your code here
-```
-
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution
+# Uncomment below and continue with your solution:
+#def check_number(num):
+#    return # Your code here
+
 ```
 <!-- #endsolution -->
 
@@ -1994,15 +1993,14 @@ Write a function that takes any number of strings and returns them concatenated 
 Hint: Think about `join()` and how it works with strings
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": ""}
-# Example: combine_strings('hello', 'world') returns 'hello world'
-def combine_strings(*args):
-    return # Your code here
-```
-
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution:
+# Example: combine_strings('hello', 'world') returns 'hello world'
+# Uncomment below and continue with your solution:
+#def combine_strings(*args):
+#    return # Your code here
+
+
 ```
 <!-- #endsolution -->
 
@@ -2017,18 +2015,11 @@ Sort this list of dictionaries by the 'age' key using a lambda function.
 Hint: The `sort`/`sorted` function takes a key parameter
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": ""}
-people = [
-    {'name': 'Alice', 'age': 25},
-    {'name': 'Bob', 'age': 20},
-    {'name': 'Charlie', 'age': 30}
-]
-sorted_people = # Your code here
-```
-
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution
+# Continue with your solution below:
+#sorted_people = # Your code here
+
 ```
 <!-- #endsolution -->
 
@@ -2238,40 +2229,65 @@ if __name__ == "__main__":
 <!-- #region editable=false slideshow={"slide_type": "slide"} -->
 ## Have a play!
 
- - try to put the example content from the last slide into a mymodule.py in your folder and import `myfunction` into this notebook
- - Add your own function that returns the sine of a value (you might need to restart the kernel in the tab Kernel-> Restart Kernel) if you have already executed the import.
+ - (1) Try to put the example content from the last slide into a `mymodule.py` in your folder, (2) import `myfunction` into this notebook and (3) run it.
+ - (4) Add your own function that returns the sine of a value (you might need to restart the kernel in the tab _Kernel_-> _Restart Kernel_) if you have already executed the import.
+ - (5) Test it (import the module with your new function and run it).
+
 <!-- #endregion -->
 
-```python editable=true slideshow={"slide_type": ""}
-# Write your solution here
-
-```
-
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution
-# this is done with this notebook here, but usually you would create this outside of python in an external editor
+# solution hint, cell 1
+# (this is done with this notebook here, but usually you create this outside of python in an external editor)
+# Write the content into the module file:
+
+
+
+
+
+
 ```
 <!-- #endsolution -->
 
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution cell 2
+# solution hint, cell 2
+# Import the module:
+
 ```
 <!-- #endsolution -->
 
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution cell 3
+# solution hint, cell 3
+# Call the function from the module:
+
 ```
 <!-- #endsolution -->
 
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution cell 4
-# to avoid the kernel restart we output into a second file
+# solution hint, cell 4
+# To avoid the kernel restart, we output into a second file:
+
+
+
+
+
+
+
+
 ```
 <!-- #endsolution -->
+
+<!-- #solution -->
+```python editable=true slideshow={"slide_type": ""}
+# solution hint, cell 4
+# Import your module and run the sine function from your own module:
+
+```
+<!-- #endsolution -->
+
 
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 ---
@@ -2282,15 +2298,94 @@ if __name__ == "__main__":
 <!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": ""} -->
-* Python is an object oriented programming language.
-* Almost everything in Python is an object, with its properties and methods.
-* A Class is like an object constructor, or a "blueprint" for creating objects.
+* Python is an object oriented programming language. Object-Oriented Programming is a programming paradigm based on the concept of "objects" which can contain:
+  - Data (attributes)
+  - Code (methods)
 <!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": "subslide"} -->
 ### What is OOP?
+Key OOP Concepts:
 
-How do you put an elephant into a refrigerator?
+1. **Classes and Objects**
+   - Class: A blueprint for creating objects
+   - Object: An instance of a class
+
+
+A simple example:
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+# Simple example
+class Dog:
+    def __init__(self, name):
+        self.name = name  # attribute
+        
+    def bark(self):      # method
+        print(f"{self.name} says woof!")
+
+# Creating objects
+dog1 = Dog("Rex")
+dog2 = Dog("Buddy")
+dog1.bark()  # Rex says woof!
+```
+
+- `__init__`: The constructor method to initialize the attributes.
+
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+2. **Encapsulation**
+   - Bundling data and methods that work on that data within one unit
+   - Restricting access to certain details
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+class BankAccount:
+    def __init__(self):
+        self._balance = 0  # protected attribute
+        
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+            
+    def get_balance(self):
+        return self._balance
+```
+
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+3. **Inheritance**
+   - Creating new classes that are built upon existing classes
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        
+    def speak(self):
+        pass
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says meow!"
+```
+
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+4. **Polymorphism**
+   - Different classes can be treated through the same interface
+<!-- #endregion -->
+
+```python editable=true slideshow={"slide_type": ""}
+def make_speak(animal):
+    print(animal.speak())
+
+cat = Cat("Whiskers")
+make_speak(cat)  # Whiskers says meow!
+```
+
+<!-- #region editable=false slideshow={"slide_type": "subslide"} -->
+"Real-World" Example: The Elephant and Refrigerator
+
+How do you put an elephant into a refrigerator? Old style (without classes):
 <!-- #endregion -->
 
 ```python editable=true slideshow={"slide_type": ""}
@@ -2304,7 +2399,6 @@ refrigerator_x = 6
 refrigerator_y = 6
 refrigerator_h = 6
 
-
 def open_refrigerator_door():
     print('Refrigerator door is opened')
 
@@ -2316,7 +2410,6 @@ def put_elephant_to_refrigerator():
 
 def close_refrigerator_door():
     print('Close the refrigerator door')
-
 
 # compare size
 if elephant_x < refrigerator_x and elephant_y < refrigerator_y and elephamt_h < refrigerator_h:
@@ -2333,7 +2426,11 @@ else:
 <!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": "subslide"} -->
-Let's define our classes:
+Now let's look at our elephant and refrigerator example through OOP principles:
+
+1. **Encapsulation**: Both `Elephant` and `Refrigerator` classes keep their properties (dimensions) and behaviors (package, open_door) together
+2. **Abstraction**: The complex logic of putting an elephant in a refrigerator is hidden behind simple method calls
+3. **Object Interaction**: The `Refrigerator` class works with `Elephant` objects
 <!-- #endregion -->
 
 ```python editable=true slideshow={"slide_type": ""}
@@ -2391,14 +2488,14 @@ refrigerator.put_elephant(elephant)
 
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 ---
-1. The Elephant class contains the package method.
+1. The `Elephant` class contains the `package` method.
 
-2. The Refrigerator class contains methods for opening and closing the door (open_door and close_door) 
-as well as putting the elephant inside (put_elephant).
+2. The `Refrigerator` class contains methods for opening and closing the door (`open_door` and `close_door`) 
+as well as putting the elephant inside (`put_elephant`).
 
-3. The logic to determine if the elephant fits into the refrigerator is now part of the put_elephant method.
+3. The logic to determine if the elephant fits into the refrigerator is now part of the `put_elephant` method.
 
-4. We create instances of the Elephant and Refrigerator classes and use the put_elephant method to put the elephant into the refrigerator.
+4. We create instances of the `Elephant` and `Refrigerator` classes and use the `put_elephant` method to put the elephant into the refrigerator.
 <!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": "slide"} -->
@@ -2406,33 +2503,39 @@ as well as putting the elephant inside (put_elephant).
 <!-- #endregion -->
 
 <!-- #region editable=false slideshow={"slide_type": "subslide"} -->
-### Exercise
+### Exercise: Building a Car Management System 🚗
 
-Attributes:
-* `make`: The make of the car (e.g., Toyota, Honda);
-* `model`: The model of the car (e.g., Camry, Civic);
-* `year`: The year the car was manufactured;
-* `color`: The color of the car;
-* `mileage`: The current mileage of the car.
+Create a `Car` class that simulates basic car operations. This exercise will help you practice working with class attributes and methods.
 
-Methods:
-* `__init__`: The constructor method to initialize the attributes;
-* `drive(distance)`: A method that takes a distance in miles as a parameter and increases the mileage of the car accordingly;
-* `paint(new_color)`: A method that changes the color of the car;
-* `display_info()`: A method that displays all the information about the car (make, model, year, color, and mileage).
+1. Create a `Car` class with the following features:
+   - Store basic car information:
+     - `make`: The make of the car (e.g., Toyota, Honda);
+     - `model`: The model of the car (e.g., Camry, Civic);
+     - `year`: The year the car was manufactured;
+     - `color`: The color of the car;
+     - `mileage`: The current mileage of the car.
+   - Allow the car to be driven:
+     - `drive(distance)`: A method that takes a distance in miles as a parameter and increases the mileage of the car accordingly.
+   - Enable car repainting:
+     - `paint(new_color)`: A method that changes the color of the car;
+   - Display car information:
+     - `display_info()`: A method that displays all the information about the car (make, model, year, color, and mileage).
 <!-- #endregion -->
-
-```python editable=true slideshow={"slide_type": ""}
-# Write your solution here
-class Car:
-    def __init__(...):
-...
-```
 
 <!-- #solution -->
 ```python editable=true slideshow={"slide_type": ""}
-# solution
+# Uncomment below and continue with your solution:
+#class Car:
+#    def __init__(...):
+
+
+
+
+
+
+
 # Test the Car class
+
 ################
 ```
 <!-- #endsolution -->
@@ -2440,3 +2543,17 @@ class Car:
 <!-- #region editable=false slideshow={"slide_type": "fragment"} -->
 ---
 <!-- #endregion -->
+
+<!-- #region editable=false slideshow={"slide_type": "slide"} -->
+# Thank You for Attending! 👋
+
+- Feedback would really be appreciated (see the link in the email I've sent)
+- Check out our other training courses at ARC:
+  - https://www.durham.ac.uk/research/institutes-and-centres/advanced-research-computing/training-/
+- RSE support by ARC at Durham University:
+  - https://www.durham.ac.uk/research/institutes-and-centres/advanced-research-computing/research-software-engineering/
+
+#### Contact
+- Email: arc-rse@durham.ac.uk
+
+Happy Coding! 🐍
