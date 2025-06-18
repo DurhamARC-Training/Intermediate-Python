@@ -51,11 +51,11 @@ def send_message(message):
         
         # Simulate sensor readings
         if command == "SOIL_HUMIDITY":
-            return round(random.uniform(20, 80), 1)  # percentage
+            return str(round(random.uniform(20, 80), 1))  # percentage
         elif command == "AIR_HUMIDITY":
-            return round(random.uniform(30, 70), 1)  # percentage
+            return str(round(random.uniform(30, 70), 1))  # percentage
         elif command == "TEMPERATURE":
-            return round(random.uniform(15, 30), 1)  # Celsius
+            return str(round(random.uniform(15, 30), 1))  # Celsius
         else:
             print(f"Unknown command: {command}")
             return None
