@@ -2,3 +2,9 @@
 
 mymodule.py
 mymodule2.py
+
+test_folder/output.txt
+
+__pycache__/
+*.pyc
+plant_log.csv
