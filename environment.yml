@@ -9,3 +9,6 @@ dependencies:
 - jupyterlab_rise
 - jupyter_contrib_nbextensions
 - jupytext
+- nbclassic
+- python-lsp-server
+- numpy
