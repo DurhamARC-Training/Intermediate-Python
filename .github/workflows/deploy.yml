@@ -2,7 +2,7 @@ name: Deploy Jupyter Notebooks to GitHub Pages
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main ]
 
 env:
   TEMPLATE_REPO: 'DurhamARC-Training/PythonCourse-jupyterlite'
@@ -51,7 +51,7 @@ jobs:
 
   deploy:
     needs: build
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     permissions:
       pages: write
       id-token: write
