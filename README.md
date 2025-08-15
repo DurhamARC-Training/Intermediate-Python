@@ -1,64 +1,39 @@
-# Coding with Python
+![Course logo](img/ARC448p.png)
 
-Welcome to ARC training course "Coding with Python" repository! This repository contains all the materials and resources for the course.
+# Course: "Coding with Python"
+
+Welcome to the "Coding with Python" repository! This repository contains all the materials and resources for the course.
+
+## Course description
+
+This practical course develops essential Python skills for researchers who have completed "Learning to programme with Python" and want to write more effective code. We'll explore Python's core data structures (dictionaries, sets, tuples), learn list comprehensions and conditional expressions, and cover advanced string manipulation techniques for efficient data processing.
+Beyond these fundamentals, we'll focus on writing robust, maintainable code through proper exception handling and modular programming. The course concludes with an introduction to object-oriented programming and classes. Throughout, we'll work through examples together, emphasising clear, readable Python that follows established conventions and prepares you for more complex computational work in your research.
 
 ## Organisation
 
-The repository is organized as follows:
+The repository is organised as follows:
 
-- `Intermediate.ipynb`: The course's Jupyter notebook with the corresponding materials.
+- `Intermediate.ipynb`: This file/folder contains the course material we will be using during the course
 
-- `Intermediate_full.ipynb`: The course's Jupyter notebook with all the material filled in. It is meant for reference purposes for teaching the course and as a fallback if something is missing from the notes students made during the course.
+- `Intermediate_full.ipynb`: This file/folder contains the completed course material, the solutions to the exercises and the speaker notes. It is meant for reference purposes for teaching the course and as a fallback if something is missing from the notes students made during teaching.
 
-- `pull_files_from_repo.py`: download script that can be executed to extract this repository into a folder.
+## Accessing the Materials
 
-## Getting started as student
+For this course we are using [JupyterLite](https://jupyterlite.readthedocs.io/en/stable/), which is a tool that allows us to launch [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) and run our Python code in the web browser through the notebook (.ipynb) files contained in this repository.
 
-If you want to set up a new conda environment for the course you can use `environment.yml` provided in this folder.
+To access and run the course materials, start by:
 
-There are three possibilities to get the data:
+* Navigating to the course materials on our GitHub page: [https://durhamarc-training.github.io/Intermediate-Python/](https://durhamarc-training.github.io/Intermediate-Python/)
 
-1. If you want only to follow along, just download and open the `Intermediate.ipynb` notebook on your machine or in your environment using your local Jupyter installation.
+* Start by accessing `Intermediate.ipynb`
 
-2. There is also a python script which downloads everything (including the filled notebook) as a ZIP archive and extracts it a folder if GIT isn't available:
+You are now ready to start the course!
 
-      a. Download the `pull_files_from_repo.py` file and put it into your environment
+NOTE: The first time you run your code/load new modules, there may be a small wait while the module(s) are loaded.
 
-      b. Execute `python pull_files_from_repo.py` in the folder.
-
-3. If you have GIT available, you can just clone the repo with:
-
-   `git clone https://github.com/DurhamARC-Training/Intermediate-Python.git`
-
-## Getting started for teaching
-
-To get started with teaching the course, follow these steps:
-
-1. Install the requirements including JupyterLab Deck by running the following command to create a conda environment:
-
-    ```
-    conda env create -f environment.yml
-    ```
-
-2. Launch a JupyterLab session by running the following command:
-
-    ```
-    conda activate intermediate_python
-    jupyter lab
-    ```
-
-3. Use the `Intermediate.ipynb` for the presentations and exercises to use during the course. If needed, use the `Intermediate_full.ipynb` notebook as lecture notes with solutions.
-
-4. Click on the little card styles JupyterLab-Deck icon for running a notebook as a presentation.
-
-5. It is also possible to convert the Jupyter notebook to PDF (be sure first to run all cells you want to run and save):
-
-    * Call `jupyter nbconvert --to slides --post serve `Intermediate.ipynb`
-    * Go to http://localhost:8000/Intermediate.slides.html?print-pdf#/
-    * Print via Print to PDF function of your browser
-
-## How to contribute
+## Contributing
 
 If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Contributions are welcome!
 
-If you're a co-developer of our training course, please read the workflow we suggest in our [Developer's Guide](development.md).
+You can add the files of the `common-tools` github submodule by typing in `git submodule update --init`. Consult the README in the then filled `common-tools` directory for further instructions.
+In general you should never edit the content in the `Intermediate.ipynb` but work on `Intermediate_full.ipynb` and have the tool generate the student notebook versions automatically as described in the `common-tools` README.
