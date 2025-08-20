@@ -9,7 +9,7 @@ import time
 # Global state to track connections
 _connected_sensors = set()
 
-def connect(sensor_id):
+def connect(sensor_id: str) -> bool:
     """
     Connect to a sensor with given ID.
     Returns True if successful, False otherwise.
@@ -22,7 +22,7 @@ def connect(sensor_id):
     print(f"Sensor {sensor_id} connected successfully.")
     return True
 
-def disconnect(sensor_id):
+def disconnect(sensor_id: str) -> bool:
     """
     Disconnect a sensor with given ID.
     Returns True if successful, False otherwise.
@@ -35,7 +35,7 @@ def disconnect(sensor_id):
     print(f"Sensor {sensor_id} disconnected.")
     return True
 
-def send_message(message):
+def send_message(message: str) -> str | None:
     """
     Send a message to the sensor and get a reading.
     Message format: "SENSOR_ID:COMMAND"
