@@ -6,7 +6,7 @@ Welcome to the "Coding with Python" repository! This repository contains all the
 
 ## Course description
 
-This practical course develops essential Python skills for researchers who have completed "Learning to programme with Python" and want to write more effective code. We'll explore Python's core data structures (dictionaries, sets, tuples), learn list comprehensions and conditional expressions, and cover advanced string manipulation techniques for efficient data processing.
+This practical course develops essential Python skills for researchers who have completed "[Learning to programme with Python](https://github.com/DurhamARC-Training/BasicProgrammingPython)" and want to write more effective code. We'll explore Python's core data structures (dictionaries, sets, tuples), learn list comprehensions and conditional expressions, and cover advanced string manipulation techniques for efficient data processing.
 Beyond these fundamentals, we'll focus on writing robust, maintainable code through proper exception handling and modular programming. The course concludes with an introduction to object-oriented programming and classes. Throughout, we'll work through examples together, emphasising clear, readable Python that follows established conventions and prepares you for more complex computational work in your research.
 
 ## Organisation
