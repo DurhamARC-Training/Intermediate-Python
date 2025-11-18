@@ -11,3 +11,8 @@ jobs:
   deploy:
     uses: DurhamARC-Training/PythonCourse-jupyterlite/.github/workflows/deploy-jupyterlite.yml@github-action-branches
     secrets: inherit
+
+  cleanup:
+    if: github.event_name == 'delete'
+    uses: DurhamARC-Training/PythonCourse-jupyterlite/.github/workflows/cleanup-branch-deployment.yml@github-action-branches
+    secrets: inherit
