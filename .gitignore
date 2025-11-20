@@ -8,3 +8,5 @@ test_folder/output.txt
 __pycache__/
 *.pyc
 plant_log.csv
+calculator.py
+example.csv
