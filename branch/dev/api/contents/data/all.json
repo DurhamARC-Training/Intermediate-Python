@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2026-02-27T15:37:04.949122Z",
+      "created": "2026-03-02T10:54:24.024014Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-02-27T15:36:47.701283Z",
+      "last_modified": "2026-03-02T10:54:06.290535Z",
       "mimetype": "text/plain",
       "name": "testfile.txt",
       "path": "data/testfile.txt",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2026-02-27T15:37:04.948759Z",
+      "created": "2026-03-02T10:54:24.023717Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-02-27T15:36:47.699868Z",
+      "last_modified": "2026-03-02T10:54:06.289447Z",
       "mimetype": "text/plain",
       "name": "data_file.txt",
       "path": "data/data_file.txt",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2026-02-27T15:37:04.949122Z",
+  "created": "2026-03-02T10:54:24.024014Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2026-02-27T15:37:04.949122Z",
+  "last_modified": "2026-03-02T10:54:24.024014Z",
   "mimetype": null,
   "name": "data",
   "path": "data",
